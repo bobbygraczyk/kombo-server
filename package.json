@@ -1,0 +1,33 @@
+{
+  "name": "laddr",
+  "version": "1.0.0",
+  "description": "Stream controller",
+  "main": "index.js",
+  "scripts": {
+    "serverDev": "nodemon index.js",
+    "server": "index.js",
+    "client": "cd client && npm start",
+    "dev": "concurrently \"npm run serverDev\" \"npm run client\"",
+    "staging": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "",
+  "license": "",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^4.1.0",
+    "cross-env": "^5.2.0",
+    "dotenv": "^6.1.0",
+    "es6-promise": "^4.2.5",
+    "express": "^4.16.4",
+    "isomorphic-fetch": "^2.2.1",
+    "mongoose": "^5.3.6",
+    "axios": "^0.18.0",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
