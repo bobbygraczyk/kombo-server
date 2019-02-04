@@ -8,9 +8,12 @@ require('dotenv').config();
 const app = express();
 
 const port = process.env.PORT;
+const url = process.env.DB;
+
+console.log(url);
 
 //connect to the database
-mongoose.connect(process.env.DB, { useNewUrlParser: true })
+mongoose.connect(url, { useNewUrlParser: true })
   .then(() => console.log(`Database connected successfully`))
   .catch(err => console.log(err));
 
