@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto|Teko|Viga|Futura");
+body {
+  font-family: "Roboto", sans-serif;
+}
+body h1, body h2, body h3, body h4, body h5 {
+  font-family: "Teko", sans-serif;
+}
+body ::-webkit-scrollbar {
+  width: 6px;
+}
+body ::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
+}
+body ::-webkit-scrollbar-thumb {
+  background-color: #292929;
+}
+
+.scoreboard {
+  width: 100vw;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 800;
+  height: 100vh;
+}
+.scoreboard .container {
+  position: absolute;
+  width: 100vw;
+  text-align: center;
+}
+.scoreboard .container table {
+  margin: 0 auto;
+}
+.scoreboard .container table #one {
+  text-align: left;
+}
+.scoreboard .container table #two {
+  text-align: right;
+}
+.scoreboard .edit-panel {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: #eae2e2;
+  border: 1px solid #292929;
+}
+.scoreboard .edit-panel input {
+  width: 48px;
+}
+
+.dashboard-header {
+  height: 29px;
+  width: 100vw;
+  background-color: #292929;
+}
+.dashboard-header h2 {
+  width: fit-content;
+  display: inline-block;
+  margin: 0px 10px;
+  color: #eae2e2;
+  position: relative;
+  font-family: "Viga", sans-serif;
+  font-weight: 200;
+}
+.dashboard-header #buttons {
+  display: inline-block;
+  margin: 0;
+  position: relative;
+  top: -3px;
+}
+.dashboard-header #buttons button {
+  margin: 0px 2px;
+  color: #eae2e2;
+  cursor: pointer;
+  border: 2px solid #0f0f0f;
+  border-radius: 4px 4px 0px 0px;
+  -webkit-border-radius: 4px 4px 0px 0px;
+  -moz-border-radius: 4px 4px 0px 0px;
+  -ms-border-radius: 4px 4px 0px 0px;
+  -o-border-radius: 4px 4px 0px 0px;
+}
+.dashboard-header #liveButton {
+  float: right;
+  margin: 4px;
+}
+.dashboard-header .logo {
+  color: #eae2e2;
+  float: right;
+  font-family: "Viga", sans-serif;
+  font-size: 24px;
+  margin: 0px 4px;
+}
+
+.dashboard-queue {
+  border: 2px solid #292929;
+}
+
+.twitch {
+  resize: both;
+  border: 2px solid #292929;
+}
+.twitch #iframe {
+  display: inline-block;
+}
+.twitch #stream {
+  height: 18vw;
+}
+.twitch #chat {
+  height: calc(100vh - 18vw - 65px);
+}
+
+.chat {
+  resize: both;
+  border: 2px solid #292929;
+  overflow: hidden;
+  max-width: 100%;
+}
+.chat #input {
+  position: absolute;
+  width: 100%;
+  height: 120px;
+  bottom: 2px;
+  padding: 4px;
+}
+.chat #input input {
+  height: 90px;
+  width: calc(33vw - 18px);
+}
+.chat #chat {
+  padding: 4px;
+  overflow-y: scroll;
+  height: calc(100% - 156px);
+}
+.chat .message {
+  background-color: white;
+  margin: 4px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  padding: 4px;
+  word-wrap: break-word;
+}
+.chat .message #name {
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  background-color: #a41318;
+  color: #eae2e2;
+  font-family: "Futura", sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+  padding: 2px 4px;
+}
+.chat .message #date {
+  font-family: "Roboto", sans-serif;
+  font-weight: 200;
+  color: #292929;
+  float: right;
+}
+.chat .message #body {
+  font-family: "Roboto", sans-serif;
+  margin: 2px;
+  font-size: 16px;
+}
+.chat button {
+  margin: 4px 0px;
+  border: 0px;
+  background-color: #a41318;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  color: #eae2e2;
+  position: absolute;
+  left: calc(33vw - 54px);
+}
+
+.control {
+  resize: both;
+  border: 2px solid #292929;
+}
+
+.flexbox-wrapper {
+  display: flex;
+  width: 100vw;
+  height: calc(100vh - 30px);
+  position: absolute;
+  top: 30px;
+  overflow: hidden;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #999;
+}
+.flexbox-wrapper #flexbox-half-height, .flexbox-wrapper #flexbox {
+  display: inline-block;
+  margin: 2px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  width: calc(33vw - 4px);
+  background-color: #eae2e2;
+}
+.flexbox-wrapper #flexbox-half-height {
+  height: calc(50vh - 23px);
+}
+.flexbox-wrapper #flexbox {
+  height: calc(100vh - 30px);
+}
+
+.panel-top-bar {
+  background-color: #0f0f0f;
+  color: #eae2e2;
+}
+
+.currentSet {
+  width: 100%;
+  text-align: center;
+}
+.currentSet h2 {
+  margin: 4px;
+}
+.currentSet h4 {
+  margin: 2px;
+}
+
+.next-up {
+  width: 100%;
+  text-align: center;
+}
+.next-up h3 {
+  margin: 4px;
+}
+
+.create-session, .welcome {
+  font-family: "Viga", sans-serif;
+  text-align: center;
+}
+
+.welcome {
+  position: relative;
+  top: 40vh;
+  text-align: center;
+}
+.welcome h4 {
+  color: #eae2e2;
+  background-color: #a41318;
+  height: auto;
+  width: 120px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  font-size: 20px;
+  position: relative;
+  left: calc(50% - 60px);
+}
+.welcome button {
+  color: #eae2e2;
+  background-color: #a41318;
+  height: 20px;
+  width: auto;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  font-size: 12px;
+  border: none;
+  margin: 0px 2px;
+}
+.welcome input {
+  height: 20px;
+  border: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+/*# sourceMappingURL=App.css.map */

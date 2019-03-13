@@ -7,8 +7,7 @@
     "serverDev": "nodemon index.js",
     "server": "node index.js",
     "client": "cd client && npm start",
-    "dev": "concurrently \"npm run serverDev\" \"npm run client\"",
-    "staging": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run serverDev\" \"npm run client\""
   },
   "author": "",
   "license": "",

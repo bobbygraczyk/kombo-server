@@ -10,7 +10,8 @@ const SessionSchema = new Schema({
   messages: [{
     user: String,
     body: String,
-    date: Date
+    date: Date,
+    tags: [{tag: String}]
   }],
   tournamentName: String,
   tournamentSlug: String,
@@ -21,13 +22,32 @@ const SessionSchema = new Schema({
   streamInfo: Object,
   matchInfo: Object,
   streamLayout: [{
-    nameWidth: Number,
-    scoreWidth: Number,
-    fontSize: Number,
-    fontWeight: Number,
-    fontColor: String,
-    fontStyle: String,
-    scoreboardHeight: Number,
+    name: {
+      width: String,
+      font: String,
+      top: String,
+      fontSize: String,
+      color: String
+    },
+    score: {
+      width: String,
+      font: String,
+      top: String,
+      fontSize: String,
+      color: String
+    },
+    round: {
+      font: String,
+      top: String,
+      fontSize: String,
+      color: String
+    },
+    event: {
+      font: String,
+      top: String,
+      fontSize: String,
+      color: String
+    }
   }]
 })
 

@@ -88,6 +88,11 @@ function smashQuery (id, key) {
             set(id: $setId) {
               fullRoundText
               displayScore
+              event {
+                videogame {
+                  name
+                }
+              }
             }
           }`;
           const variables = { setId: streamData.streamQueue[0].sets[0].id };
@@ -140,6 +145,12 @@ router.get('/sessions/:id', (req, res, next) => {
     .catch(next)
 })
 
+router.post('/sessions/:id/messages', (req, res, next) => {
+  Session.findOneAndUpdate({"key": req.params.id}, {$push: {messages: {user: req.body.user, body: req.body.body, date: req.body.date}}})
+    .catch(err => console.log(err))
+    .catch(next)
+})
+
 router.post('/sessions/:id/updateTournament', (req, res, next) => {
   Session.findOneAndUpdate({"key": req.params.id}, {"tournamentSlug": req.body.tournamentSlug})
     .then(data => res.json(data))
@@ -149,6 +160,13 @@ router.post('/sessions/:id/updateTournament', (req, res, next) => {
 
 router.post('/sessions/:id/updateStream', (req, res, next) => {
   Session.findOneAndUpdate({"key": req.params.id}, {"stream": req.body.streamId})
+    .then(data => res.json(data))
+    .catch(err => console.log(err))
+    .catch(next)
+})
+
+router.post('/sessions/:id/scoreboard', (req, res, next) => {
+  Session.findOneAndUpdate({"key": req.params.id}, {"streamLayout": req.body})
     .then(data => res.json(data))
     .catch(err => console.log(err))
     .catch(next)
